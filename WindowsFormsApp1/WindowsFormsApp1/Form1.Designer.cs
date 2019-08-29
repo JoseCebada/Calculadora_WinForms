@@ -48,6 +48,7 @@
             this.btnPorciento = new System.Windows.Forms.Button();
             this.btnIgual = new System.Windows.Forms.Button();
             this.richPantalla = new System.Windows.Forms.RichTextBox();
+            this.txtAccActual = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn0
@@ -260,18 +261,29 @@
             // 
             // richPantalla
             // 
-            this.richPantalla.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richPantalla.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richPantalla.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richPantalla.Location = new System.Drawing.Point(10, 12);
             this.richPantalla.Name = "richPantalla";
             this.richPantalla.Size = new System.Drawing.Size(257, 76);
             this.richPantalla.TabIndex = 20;
             this.richPantalla.Text = "";
             // 
+            // txtAccActual
+            // 
+            this.txtAccActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAccActual.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccActual.Location = new System.Drawing.Point(10, 34);
+            this.txtAccActual.Name = "txtAccActual";
+            this.txtAccActual.Size = new System.Drawing.Size(257, 35);
+            this.txtAccActual.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 427);
+            this.Controls.Add(this.txtAccActual);
             this.Controls.Add(this.richPantalla);
             this.Controls.Add(this.btnIgual);
             this.Controls.Add(this.btnPorciento);
@@ -296,6 +308,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -320,6 +333,7 @@
         private System.Windows.Forms.Button btnPorciento;
         private System.Windows.Forms.Button btnIgual;
         private System.Windows.Forms.RichTextBox richPantalla;
+        private System.Windows.Forms.TextBox txtAccActual;
     }
 }
 
