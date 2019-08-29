@@ -217,13 +217,19 @@ namespace WindowsFormsApp1
             richPantalla.Clear();
             txtAccActual.Clear();
         }
-
+        
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
             if (txtAccActual.Text.Length == 1)
                 txtAccActual.Text = "";
             else
                 txtAccActual.Text = txtAccActual.Text.Substring(0, txtAccActual.Text.Length - 1);
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 48)
+                Btn0_Click(sender, e);
         }
     }
 }
