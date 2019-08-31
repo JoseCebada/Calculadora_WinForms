@@ -120,14 +120,9 @@ namespace WindowsFormsApp1
 
         private void BtnPorciento_Click(object sender, EventArgs e)
         {
-            if (cantclick == 0)
-            {
-                resultado = 0;
-            }
-            else if (cantclick == 1)
-            {
-                b = double.Parse(richPantalla.Text);
-            }
+            a = Convert.ToDouble(txtAccActual.Text);
+            richPantalla.Text = txtAccActual.Text + " %";
+            cantnum = 0;
         }
 
         private void BtnDiv_Click(object sender, EventArgs e)
@@ -205,8 +200,12 @@ namespace WindowsFormsApp1
                 txtAccActual.Text = resultado.ToString();
                 richPantalla.Text = "";
             }
-            if (operador == "%")
+            if (richPantalla.Text.Contains("%") == true)
             {
+                b = Convert.ToDouble(txtAccActual.Text);
+                resultado = a /100 * b;
+                txtAccActual.Text = resultado.ToString();
+                richPantalla.Text = "";
 
             }
         }
